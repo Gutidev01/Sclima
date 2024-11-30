@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SClima - Servicio Técnico Aire Acondicionado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div id="navbar"></div>
+    </header>
+
+    <!-- centroweb Section -->
+    <section class="centroweb">
+        <div class="centroweb-content">
+            <h1>Servicio Técnico de Aire Acondicionado</h1>
+            <p>Con más de 20 años de experiencia, ofrecemos soluciones eficientes de climatización y mantenimiento.</p>
+        </div>
+        <div class="centroweb-image">
+            <img src="assets/fotoaire.jpg" alt="Servicio garantizado">
+        </div>
+    </section>
+
+    <!-- Sección de Servicios Principales -->
+    <section id="services" class="services">
+        <h2>Algunos de Nuestros Servicios</h2>
+        <div class="service-items">
+            <div class="service-item">
+                <h3>Instalación de Aire Acondicionado</h3>
+                <p>Servicio profesional de instalación.</p>
+            </div>
+            <div class="service-item">
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Planes de mantenimiento para extender la vida útil de tus equipos.</p>
+            </div>
+            <div class="service-item">
+                <h3>Asesoría en Energía</h3>
+                <p>Optimización de recursos energéticos para climatización eficiente.</p>
+            </div>
+        </div>
+        <div style="padding: 30px; padding-bottom: 150px;">
+        <button id="crearSolicitudBtn" class="btn-primary">SOLICITAR SERVICIO</button>
+        </div>
+    </section>   
+        <!-- Botón para Crear una Solicitud -->
+        
+
+    
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+       document.getElementById('crearSolicitudBtn').addEventListener('click', function() {
+    const token = localStorage.getItem('usuarioToken');
+    console.log('Token verificado:', token); // Agregar depuración
+
+    if (!token) {
+        alert('Debes registrarte o iniciar sesión primero para crear una solicitud.');
+        window.location.href = 'login.html';
+    } else {
+        window.location.href = 'conser.html';
+    }
+});
+    </script>
+</body>
+</html>
